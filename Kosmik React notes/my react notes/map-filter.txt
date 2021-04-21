@@ -1,0 +1,18 @@
+
+Array functions in js
+
+1. map()
+
+	render (<p> array.map(myElement=> <li>{myArrayElement}</li>) </p>);
+
+
+2. filter()
+ 	
+ 	array.filter(myElement => myElement.includes('ap')).map(myElement2 => <li> {myElement2} </li>)
+ 	array.filter(myElement => myElement < 10).map(myElement2 => <li> {myElement2} </li>)
+
+
+ 		NOTE:
+ 		- inside filter method call braces, we can use:
+ 		 -  various conditional functions like "includes", "startWith", "endWith", etc
+ 		 - or simple operators like >,<, =, etc

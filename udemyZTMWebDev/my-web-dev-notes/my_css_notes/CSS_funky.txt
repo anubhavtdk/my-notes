@@ -1,0 +1,37 @@
+
+1. Transitions & Transforms:
+
+
+	I. Transitions:	
+
+		- "transforms" move or change the appearance of an element, while "transitions" make the element smoothly and gradually change from one state to another.
+
+		SYNTAX:
+		- Below is the shorthand property for "transition-property", "transition-duration" etc.
+		- Only first two are required ("property" & "duration"), the remaining two are optional properties.
+
+				div {
+				  transition: [property] [duration] [timing-function] [delay];
+				}
+
+			property  = ( all | transform | background-color )
+				//you may apply a transition to an individual property (i.e., background-color or tranform) or to all properties in the rule-set (i.e., all)
+
+		DEMO:
+				img {			
+					transition: all 1s;		
+				}	/* all properties of "img" acquire a lag of 1s, including "transform" (when hovered)*/
+				img:hover {							
+					transform: scale(1.2);			/*transform op*/
+				}
+
+
+		NOTE:
+			1. "transitions" & "transform" are called "CSS Power couple" & are often used together.
+		    2. However, "transitions" can also be used elsewhere where elements change from one style to another (e.g., when a button changes color on hover).
+		
+
+
+	II. Transform:
+	 
+

@@ -1,0 +1,76 @@
+Styling in React:
+
+1. inline or internal styling
+	eg1:
+		ReactDOM.render(
+			<div>
+				<h1 style = {{backgroundColor: 'black', color: 'orange', textAlign: 'center'}}> yoooo </h1>
+			</div>,
+			document.getElementById('root')
+		);
+
+	eg2:
+			var myStyle = {
+				backgroundColor: 'black', color: 'orange', textAlign: 'center'
+			};
+
+			ReactDOM.render(
+				<div>
+					<h1 style ={myStyle}> yoooo </h1>
+				</div>,
+				document.getElementById('root');
+			);
+
+	eg3:
+			var myStyle = {
+				backgroundColor: 'black', color: 'orange', textAlign: 'center'
+			};
+
+			var yourStyle = {{backgroundColor: myStyle.backgroundColor}};
+			
+			ReactDOM.render(
+				<div>
+					<h1 style ={myStyle}> yoooo </h1>
+				</div>,
+				document.getElementById('root')
+			);
+
+	eg4:
+			var myStyle = {
+				backgroundColor: 'black', color: 'orange', textAlign: 'center'
+			};
+			var myElement = <div>
+				<h1 style ={myStyle}> yoooo </h1>
+			</div>;
+		
+			ReactDOM.render(
+				myElement,
+				document.getElementById('root')
+			);
+
+	eg5:
+			var myStyle = {
+				backgroundColor: 'black', color: 'orange', textAlign: 'center'
+			};
+
+		
+		ReactDOM.render(
+			<div>
+				<h1 style ={{backgroundColor: myStyle.backgroundColor, color: myStyle.color}}> yoooo </h1>
+			</div>,
+			document.getElementById('root')
+		);
+
+2. external 
+	- by default, index.css is imported into index.js. So, we can write all the styling in that fie.
+
+
+3. styled Components:
+	- we import components (that have styling in them) into index.js and use it for html elements & render
+
+
+FILE:	index2.js
+
+	import React, {component} from 'react';
+	import ReactDOM from 'reactdom'
+

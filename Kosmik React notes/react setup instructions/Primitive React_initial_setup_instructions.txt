@@ -1,0 +1,56 @@
+
+Package.json
+	this is a file that node generates for us.
+	it contains all the references to all the dependencies that are required.
+
+
+
+steps:
+	0. first, go to the desired folder location (generally referred as root folder for React Proj) in Command Prompt
+	
+	1. type "npm init" 		-->  creates Package.json and adds references to some neccessary dependencies
+
+	2. type "npm install react --save"   --> this installs React & ReactDOM packages for us.
+	
+	3. type "npm install react-dom --save"
+	creating components or react packages  --> react package
+	rendering components  or elements to html page --> react dom package
+
+	4.  "npm install webpack --save"
+		"npm install webpack-dev-server --save"
+		"npm install webpack-cli --save"
+		"npm install babel --save"
+
+		webpack 
+			-> module bundler --> manages all you modules and loads independent modules 
+	        -> also run the application in our local host --> change/modify the local host
+
+		babel 
+			-> plugins/dependencies
+
+	NOTE: webpack and babel are used to make our system a local host and it helps our system to act like a server and support code 
+
+	
+
+
+	6. index.html --> <div> template
+	7. index.js   -->  creating & rendering
+				--> import them & then render those components
+	
+		"type nul > index.js"
+		
+
+	8. UI & Functionality:
+		app.js --> container for allour components: (creating components)
+		<comp 1>
+		<comp2>
+		<comp3> --> export your components
+
+
+
+
+
+
+
+
+		npm install -g create-react-app

@@ -1,0 +1,24 @@
+objects in js:
+	window
+	document
+	console
+
+few methods associated with them:
+	<button onclick() = "window.alert("yo, you clicked")">Click </button>
+	<button onclick() = "document.getElementByID("ID1").innerHTML">Click </button>
+	/// only for events we may use inline JS like above two lines
+
+	document.getElementById("myId").innerHTML = "heyloo";
+	document.write ("<br>");
+	console.log("yoo");
+
+
+events in JS:
+	onClick
+	onMouseOver
+	onMouseOut
+
+	eg:
+		<p onClick="myFunction()"> qwerty </p>
+
+

@@ -1,0 +1,32 @@
+	intellij shortcuts
+
+	 1.	negation 
+	 		- press "!" when there's a completion suggestion
+
+	 2. Refractoring using Extract Variable
+	  		- ctrl + alt + V
+
+	 3. open the Project tool window and switch focus to it.
+	  		- Press Alt+1
+
+	 4. UML class diagram in a new editor tab
+	  		- ctrl + alt + shift + U
+
+	 5. open your browser with the documentation page for the element at the caret
+	 		-  press Shift+F1 (View | External Documentation).
+
+	 6. To use the above feature, a browser must be selected on the Tools | Web Browsers page of the Settings/Preferences dialog.
+	 		- Ctrl+Alt+S
+
+	 7. You can use colors to distinguish between your data sources and their elements. To set a color to a data source or its object, right-click the element in the Database tool window (View | Tool Windows | Database) and select Color Settings.
+
+	 8. Enter "/" in the search field of the Search Everywhere (Shift twice) window to search for a list of settings, their options, and plugins.
+	You can also search for the URL mappings entering "/" before the part of the URL mapping you are searching for.
+
+	9. When you use basic code completion Ctrl+Space, type any characters that exist anywhere in an identifier.
+
+	10. To join two lines into one and remove unnecessary spaces, press Ctrl+Shift+J.
+
+	11. When using Code Completion, you can accept the currently highlighted selection in the popup list by pressing Tab.
+
+	12. Unlike accepting with Enter, the selected name will overwrite the rest of the name to the right of the caret. This can be especially useful for replacing one method or variable name with another.

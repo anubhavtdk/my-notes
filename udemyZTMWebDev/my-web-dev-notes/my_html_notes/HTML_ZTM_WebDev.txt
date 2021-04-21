@@ -1,0 +1,135 @@
+ZTM Complete Web Dev:
+
+Intro
+
+How Internet works
+	Internet bockbone
+	traceroute or tracert is used to track all the hops involved in loading a website.
+	FrontEnd & BackEnd
+
+History of the Web
+	Internet existed as ARPANET.
+	Not really an effective way to transfer/share info/files till WWW was conceived.
+	Sir Tim Berners-Lee discovered WWW in 1989, CERN labs.
+	html 	- 1989	(Tim Berners-Lee)
+	css 	- 1995
+	js 		- 1996
+
+	Elements 	- html
+	Styles 		- css
+	Console 	- js
+
+[win] + [/]								shortcut for html comments in sublime... <!-- this is a comment -->
+
+HTML5
+	<!DOCTYPE HTML>						represents that the doc is html5
+ 	<html>, <head>, <title>, <body>		most common/basic tags 
+ 	<h1>,<h2>, <h3>, <h4>, <h5>, <h6>	header tag
+ 	<p>									paragraph tag
+ 	<b>, <em>							bold tag
+ 	<i>, <strong>						itallicized tags
+ 	
+ 	<ol>
+ 		<li>apple</li>
+ 			<ol>
+ 				<li>californian</li>		"<ol>" is ordered list
+ 				<li>Shimla</li>				"<li>" is the list item
+ 			</ol>
+ 		<li>mango</li>
+ 		<li>berries</li>
+ 	</ol>
+ 	
+ 	<ul>									unordered list (replacable with <ol> in the above example)
+ 	
+ 	<dl>									dl- description list, dt- description title, dd- description details
+ 		<dt>Batman</dt> 				    PREVIEW (as shown in the following two lines directly below this)
+ 		<dd>The most dangerous one<dd> 		Batman
+ 	</dl> 										The most dangerous
+
+ 	<br> or <br />							line break (self-closing)	["<br />" was used before html5 i.e. on xhtml]
+ 	<hr> or <hr />							horizontal line (self-closing)
+ 	
+ 	<img src="https://myimg.com/redapples.png" alt="Apple image" width="100" height="100">
+ 											 - image tag (self-closing)with url, height, width (in pixels) & alt attributes
+ 	
+ 	<a href="/myFiles/newpage.html" target="_blank"> Click me for new page!!!! </a>
+ 												- anchor tag (for hyperlinks)
+ 												- target attribute specifies where to open the hyperlink result
+ 												- "_blank", "_self", "_parent", "_top" are few values for target attribute
+
+Advanced HTML5
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Registration</title>
+	</head>
+	<body>
+		<form method="GET" action="action.php">
+			First Name: 	<input type="text" name="firstname"> <br>
+			Second Name: 	<input type="text" name="lastname"> <br>
+			Email: 			<input type="Email" required name="email"><br>
+			Password:  		<input type="Password" min="5" name="password"><br>
+			DOB: 			<input type="date" name="birthday"><br> <br>
+			Gender: <br>
+				<input type="radio" name="Gender" value="male">Male		<br>
+				<input type="radio" name="Gender" value="female">Female	<br>
+				<input type="radio" name="Gender" value="other">Other 	<br> <br>
+			Pets: <br>
+				<input type="checkbox" name="cats">Cats <br>
+				<input type="checkbox"name="dogs">Dogs <br>
+				<input type="checkbox"name="other">Other <br> <br> 
+			Vehicles: <br>
+				<select name="vehicles">
+					<option value="Car">		Car 		</option><br>
+					<option value="Motobike" >	Motorbike 	</option><br>
+					<option value="Other/None" > Other/None  </option><br>
+				</select> <br> <br>
+			<br><input type="submit" name="Register">
+			<input type="reset" name="Reset!"> <br>
+		</form>
+	</body>
+	</html>
+
+	method="POST"							- attribute in the form tag
+											- specifies how to send form-data (GET, POST, PUT, DELETE, PATCH, OPTIONS).
+
+	action="runme.php"						- Form attribute (refer above)
+											- Upon submit button, form-data is sent to the page specified in the action attribute
+
+	<div>									Block element, where we can stylize a div-block using css
+	<span>									In line element, where we can stylize the selected part of a line using css
+	
+	<main>,<article>,<audio>,<video>,<nav>,<section>,<header>,<footer>,<head>,<body>
+											good practices to use this tags called "Semantics" in your html code (introduced in html5 for better SEO)
+	
+	<link>, <meta>, <title>, <style>
+										these so called meta_tags must be present in <head> tag
+
+	<a href="#"> cat photos </a>			"#" in href attribute represents deadlinks i.e, it does nothing when clicked
+	
+	<a href="google.com" target="_blank">click for google </a>
+											"_blank" in target attribute makes the link to be opened in new tab, when clicked
+
+	
+	<label for="area1">
+		<input id="area1" type="radio" name="myArea" value="indoor">indoor
+	</label>
+
+	<label for="area2">
+		<input id="area2" type="radio" name="myArea" value="outdoor">outdoor
+	</label>
+
+											- The above piece of code creates to radio-buttons(indoor & outdoor) of same group "myArea"
+											- Each radio button has input_tag within label_tag
+											- label_tag_attribute "for" must be equal to input_tag_attribute "id". This is a good practice.
+
+  	<link rel="stylesheet" type="text/css" href="style.css">
+  											- link tag is self-closing meta-tag (generally used for external css)
+  											- This line is included in <head>, so that the external file style.css is linked with this current html file
+
+ 	<script type="text/javascript" src="myScript.js"></script>
+ 											- script tag is NOT self-closing tag
+
+
+  	NOTE:
+  		1. opening and closing tags "textarea" must be in the same line.

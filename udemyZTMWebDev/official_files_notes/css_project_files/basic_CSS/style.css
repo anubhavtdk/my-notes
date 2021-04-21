@@ -1,0 +1,17 @@
+/*selector{
+	property: value;
+}
+*/
+body{	
+background-image: url(https://images.hdqwalls.com/download/batman-4k2020-9y-1680x1050.jpg);
+background-size: cover;
+}
+h2 {
+	color: red;
+	text-align:center;
+	border: 5px dashed purple;
+}
+
+p {
+	color: black;
+}

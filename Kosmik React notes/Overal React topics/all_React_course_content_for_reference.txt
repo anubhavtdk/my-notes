@@ -1,0 +1,72 @@
+90 hours
+
+HTML   1hour
+
+   1.inline Elements
+   2.block Elements
+   3.input controls
+   4.list elements   
+
+Java Script : 10 hours
+      1. How to get the element references
+      2. How to create variables and functions
+      3. call , apply,bind
+      4. array methods
+      5. class, object, inheritance
+      6. AJAX
+      7. Promises 
+      8. How to apply styles dynamically using js
+
+react  :40 hours
+
+     1.why we go for react.
+     2.Virtual DOM
+     3.compare angular with react
+     4.How to dispay content to the end user by using react?
+                  components(class,functional,JSX)
+     5.How to handle events in react?
+     6.How to take the data from input controls?
+     7.How to validate the data ?
+     8.How to handle AJAX(XMLHTTPRequest,fetch,jQuery,axios)
+     9. Node js
+     10. react(client) + node js(server) + MySQL(DB)
+     12. deploy code into AWS EC2 instance
+     13. How to handle routing in react
+     14. How to build and deploy code (AWS amplifier)
+     15. react lifecycle methods
+     16. How to create reusabel components
+     17. HOC
+     18. How may way we can apply styles dynamically in react
+     19. pure component vs React.memo
+     20. state less vs state full
+     21. controlled vs uncontrolled
+     22. Exception Handling
+     23. React.Fragment
+     24. var vs let vs const vs this.state vs this.props
+     25. context
+     26. How to integrte  3rd party lib
+     27. testcases
+     28. Conditional rendering
+
+
+redux : 15
+     1.How to interate redux into react application(reducers,store)
+     2.actions
+     3.redux thunk
+     4.redux saga
+     5.redux forms
+     6.react+redux(client) + node js + MongoDB
+
+react hooks: 20
+      1.useState
+      2.useEffect
+      3.useMemo
+      4.useCallback
+      5.useContext
+      6.useReducer
+      7.react hooks (client webpack) + node js(JWT) + Orcle
+
+test - 2
+
+react-native 2
+

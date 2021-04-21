@@ -1,0 +1,25 @@
+ CSS Fonts:
+
+ 	text-decoration: underline;
+ 	text-decoration: line-through;
+ 	text-transform: uppercase;
+ 	text-transform: uppercase;
+
+	line-height: 20px;
+
+	font-style: italic;
+	font-weight: 200;	(Range: 100 to 900)
+	font-weight: bold;
+	font-size: 120%;
+
+	font-family: sans-serif;
+	font-family: "Times New Roman";	  //double quotes are used when there are multiple words involved
+	font-family: "Times New Roman", Georgia; 	/*multiple font options can be given, so that the alternative can be applied when the first font-option is not rendered */
+
+
+Great Resource for font collections: 
+https://fonts.google.com
+
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="Stylesheet">
+			/* The above line must be included in the top of our html file with the url specified picked from "google fonts" in the href attributes */
+

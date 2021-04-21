@@ -1,0 +1,47 @@
+Complete WebDev Resources:
+	developer.mozilla.org/en-US/docs/Learn
+
+Complete CSS Resources:
+	css-tricks.com
+
+Useful Resources:
+	unsplash.com 										//for free cool images
+	paletton.com 										//for color codes
+	specificity.keegan.st/								//for calculating "specificity" of CSS
+	cleancss.com/css-minify/							//for minifying CSS code
+	thoughtbot.com/blog/transitions-and-transforms		//for transitions & transforms
+	https://grid.malven.co/ 							//for CSS Grid
+	https://css-tricks.com/snippets/css/a-guide-to-flexbox/ 	//for CSS Flexbox
+
+Games/Exercises:
+	css-diner.netlify.app
+	http://flexboxfroggy.com/
+	http://cssgridgarden.com/
+
+Browser support info:
+	w3schools.com/cssref/css3_browsersupport.asp
+	caniuse.com
+
+
+external css libraries:
+	animate.css
+	bootstrap
+
+To create a website	:
+mailchimp.com
+  
+To put a created website in online:
+ github 
+
+
+New: https://cruip.com/
+
+New: Bootstrap Templates 0					https://mdbootstrap.com/freebies/
+
+Bootstrap Templates 1						http://mashup-template.com/templates.html
+
+Creative Tim templates 				https://www.creative-tim.com/bootstrap-themes/ui-kit?direction=asc&sort=price
+
+Bootstrap Templates 2					https://startbootstrap.com/templates/
+
+Animate.css 							animate.style

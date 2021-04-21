@@ -1,0 +1,26 @@
+Components in React
+
+1. class component 			- stateful component (everything depends on positioning)
+2. functional component 	- not a stateful comp ()
+
+"this" keyword
+
+
+NOTE:
+ functions can be defined in two ways/formats in JS:
+ 	1. conventional function
+ 	2. arrow function
+
+
+functional components  => no use of "this" keyword
+
+Also,
+ functional Components + Hooks  	=>  - makes the functional components stateful and better organized
+ 										- better at everything when compared to just functional comp alone
+
+VS code shortcuts
+ you type 'rcc' and press enter - you get skeleton class component definition
+
+ NOTE:
+  &ensp 	for space
+  &nsbp 	for space

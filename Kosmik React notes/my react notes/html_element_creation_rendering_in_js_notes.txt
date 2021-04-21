@@ -1,0 +1,63 @@
+
+contents of index.js
+
+0) creating html elements:
+
+	in a html file
+	 <h1 attributes> "my homepage" </h1>
+
+	in a js file
+		React.createElement(tagname, attributes, "content")
+
+		eg: 
+		 React.createElement("h1", {id: "title"}, "my webpage")
+
+1) Using traditional js methodology
+
+	step:1) assign the created elements to a variable
+		 var myElement = React.createElement("h1", {id: "title"}, "my webpage");
+
+	step:2) rendering html elements into the file index.html:
+		
+		ReactDom.render(content-to-displayed,location-of-rendering)
+		eg:
+		 ReactDom.render(title, document.getElementById('root')
+
+		 ReactDom.render(
+		 	<div>
+		 			<h1> yo </h1>
+		 			<p> uuu </p>
+		 	</div>,
+		 	document.getElementById('root')
+		 );
+
+
+2) Using Components of ReactJS
+	 - in general, app.js is a container for all components (createElement bits)
+	 - index.js has the rendering functions (ReactDom.render() bits)
+	 - a component can be a function or a class
+	 - when using a class file (.js file) as a container, you must mention export-thingy in such file and import-thingy in the index.js
+	 	eg: use the followint export-thingy in the component file
+	 		"export default MyComponent"
+
+	 - A React class that you want to use as a component must always extend to React.component
+	 		
+
+
+	step:1) class component creation:
+		class MyCompo extends React.Component{
+			render();
+			{
+				return{
+					<div>
+						<h1>my webpage</h1>
+					</div>
+				}
+			}
+		}
+
+	step:2) Rendering MyCompo component (i.e. a class extending to React.Component) 
+			ReactDOM.render{
+				<MyCompo/>, 
+				document.getElementById('root')
+			}

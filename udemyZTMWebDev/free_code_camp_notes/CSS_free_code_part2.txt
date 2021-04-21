@@ -1,0 +1,342 @@
+
+	APPLIED VISUAL DESIGN: 
+
+		BOX-MODEL:
+			CSS treats each HTML element as its own box, which is usually referred to as the CSS Box Model. 
+			- Block-level items automatically start on a new line (think headings, paragraphs, and divs) - Inline items sit within surrounding content (like images or spans). 
+			- This is "normal flow" of a document, but CSS offers the "position" property to override it.
+			- checkout the 7th point "Positioning" for more info.
+
+	1. Text manipulation:
+		text-align: justify;
+		text-align: center;
+		text-align: left;
+		text-align: right;
+
+		<strong> this text is bold </strong>
+		<u> this text is underlined </u>
+		<em> this text is italic or emphasized </em>
+		<s> this text is striked-through </s>
+		<hr> 	//a self-closing tag which just draws a plain horizontal line which divides the page
+		<aside>general text<aside>
+				// aside is equivalent to p-tag. But, as a good practice, its used to put some content to a side of the page using CSS properties.
+
+		text-decoration: underline|line-through;
+
+		text-transform: uppercase|lowercase;
+				//below table demonstrates how values of "text-transform" the content(text).
+
+				VALUE			RESULT
+			lowercase		"transform me"
+			uppercase		"TRANSFORM ME"
+			capitalize		"Transform Me"
+			initial			Use the default value
+			inherit			Use the text-transform value from the parent element
+			none			Default: Use the original text
+
+
+	2. dimensions:
+		height: 20px;
+		width: 25px;
+
+	3. color-variations:
+		background-color: rgba(45, 45, 45, 0.1);	
+						// "a" lies in [0,1]. 1 is solid, 0 is transparent. it value gives the opacity
+		background-color: blue;
+		background-color: transparent;	//absolute white/existing color is applied
+
+
+	4. visual-magic:
+			
+		i) box-shadow 
+			//It is used to add shadow to the boxes/cards in the webpage.
+			box-shadow: none;
+			box-shadow: X-offset Y-offset blur-radius spread-radius color; 
+						// Only h-offset & v-offset are mandatory. blur, spread, color are all optional.
+						/* In Safari (on PC) the color parameter is required. If you do not specify the color, the shadow is not displayed at all. */
+			box-shadow: inset;
+			box-shadow: initial;
+			box-shadow: inherit;
+
+			box-shadow: 0 10px 20px rgba(0,0,0,0.19); 			//an example
+			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+								//an example of multiple box-shadows at once on given cards.
+	 
+		ii) opacity
+			//It is used to adjust the opacity, or conversely, the transparency for an item.
+			//It ranges from 0 to 1.
+			opacity: 0.7;
+
+		iii) float
+				- best practice is to use "float" property only for "img" tags.
+				/* Floating elements are removed from the "normal flow" of a document & pushed to either the left or right of their containing parent element. */
+				/* It's commonly used with the width property to specify how much horizontal space the floated element requires. */
+				//observe the below example for illustration
+				#left {
+			      float: left;
+			      width: 50%;
+			    }
+			    #right {
+			      float: right;
+			      width: 40%;
+			    }
+
+			   NOTE:
+			   	- after "float" is used (in "img" tag),  "clear: both;" is used often (mostly for "section" tag)
+
+
+
+
+		iv) z-index
+				/* The z-index property can specify the order of how elements are stacked on top of one another. */
+				/* It must be an integer, and higher values for the z-index property of an element move it higher in the stack than those with lower values.
+
+			 z-index: 2;	
+
+
+		v) display, margin, etc
+				margin:
+				- A positioning technique to center a block-element horizontally is to set its "margin" to a value of "auto".
+				
+				display:
+				-  Images are inline-elements by default, but can be changed to block-elements when you set the "display" property to "block".
+				- Conversely, setting "display" property to "inline-block" value can convert any block-elements into inline-elements
+
+				list-style-type:
+					- for list-items, we can change the style of the markings by following manner --
+						list-style-type: square;
+
+
+	5. font funk:
+		
+		font-style: italic;
+		
+		font-size: 24px;
+		font-size: 2em;	  //increases the existing font-size by 2 times
+		font-size: 3rem;  //increases the default/original (ie root/html) font size by 3 times
+		
+		font-weight: 600;	//thickness of the text varies from 100 to 900 (400 is normal, 700 is bold)
+		font-weight: bold;	//alternative to the above one for bold font
+		
+		font-family: "Times New Roman", Georgia;
+		
+		line-height: 25px;  
+				/* changes the height of each line in a block of text i.e. the amount of vertical space that each line of text gets. */
+
+
+	6. pseudo-class:
+		/*A pseudo-class is a keyword that can be added to selectors, in order to select a specific state of the element. */
+
+		i) hover pseudo-class
+
+			  a:hover {
+			    color: blue;	//when the mouse hovers on the anchor tag, color becomes blue.
+			  }
+		
+
+	7. Positioning:
+
+		NOTE: The default value of "position" property is "static".
+
+		I) Relative positioning
+			
+			//this moves away  h2 element from top without changing the surrounding element positions.
+			h2 {
+			    position: relative;
+			    top: 15px;	
+			    /*we have "top", "bottom", "left", "right" properties that can be used when using "position" property above them. */
+			  }
+
+			// this moves the h2 element 15px right & 10px upwards (movement is opp to specified direction, just like the previous case)
+			h2{
+				position: relative;
+			    left: 15px;
+			    bottom: 10px
+			}
+
+
+		II) Absolute positioning
+			- One nuance with absolute positioning is that it will be locked relative to its closest positioned ancestor. 
+			- If you forget to add a "position rule" to the "parent item", (this is typically done using position: relative; in the parent element/selector), the browser will keep looking up the chain and ultimately default to the "body" tag.
+			- Hence, the following is done.
+				<style>
+				section {
+			    	position: relative; 
+			    	//<body> is assumed as parent-item, if the above line is not written.
+			  	}
+
+				#sub-section {
+				    position: absolute;
+				    top: 50px;
+				    right: 50px;
+			  	}
+			  	</style>
+			  	<section>
+			  	 	this is parent-item!
+			  	 	<p id="sub-section">
+			  	 	 	this is the main-item!
+			  	 	</p>
+			  	</section>
+
+			
+			- In the above code, the <style> content, i.e. CSS content is same as the below.
+
+				<style>
+				section {		
+			  	}
+
+				#sub-section {
+				    position: relative;
+				    top: 50px;
+				    right: 50px;
+			  	}
+			  	</style>
+
+		II) Fixed positioning:
+			- difference between the fixed and absolute positions is that an element with a fixed position won't move when the user scrolls.
+			- Fixed position is a type of absolute positioning that locks an element relative to the browser window.
+
+			  #navbar {
+				    position: fixed;
+				    top: 0px;
+				    left: 0px;
+				  }
+
+
+
+	8. Background Property	
+
+		Linear Gradient:
+			- CSS provides the ability to use color transitions, otherwise known as gradients, on elements.
+			- This is accessed through the background property's linear-gradient() function. 
+			- Here is the general syntax:
+				background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);
+			- Here is an example:
+				background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
+
+				/* The first argument specifies the direction from which color transition starts - it can be stated as a degree, where 90deg makes a horizontal gradient (from left to right) and 45deg is angled like a backslash. */
+
+		
+		Repeating Linear Gradient (for strips):
+			 - This repeats the specified gradient pattern.
+				background:
+					repeating-linear-gradient(
+					      90deg,					// orientation
+					      yellow 0px,				// first color
+					      blue 40px,		// second color distance (in px) from the start
+					      green 40px,		// third color distance (in px) from the start
+					      red 80px			// fourth color distance (in px) from the start
+					    );
+
+
+		background images:
+			- The "background" property supports the "url()" function in order to link to an image of the chosen texture or pattern.
+
+			 background: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
+
+
+
+	9. Transform property:
+		
+		 - The transform property has a variety of functions that let you scale, move, rotate, skew, etc
+		
+		i) scale function:
+			p {
+			  transform: scale(3.5);	//increases the size of all the p-elements to 3.5 times the original
+			}
+			p:hover {
+			  transform: scale(2);	//when hovered by mouse pointer, size of all p-elements doubles
+			}
+
+		ii) skew functions:
+			- Tilts an element to the left or right, like turning a rectangle into a parallelogram
+			skewX():
+				- skews the selected element along its X (horizontal) axis by a given degree.
+				p {			// tilts p-elements in anti-clockwise(+) or clockwise(-) in "deg" from +ve X-axis
+				  transform: skewX(-32deg);		
+				}
+			skewY():
+				- skewY() property skews an element along the Y (vertical) axis.
+				p {	
+				  transform: skewY(20deg);		
+				}
+			skew():
+				- shorthand function for both skewX() and skewY()
+				p {
+				  transform: skew(25deg, 25deg);
+				}
+
+		ii) rotate function:
+			- Rotates the element clockwise from its current position.
+				transform: rotate(25deg);
+
+
+
+
+	10. Pseudo elements:
+			::before	//to extend & modify the shape/body of a selected element before itself
+			::after		//to extend & modify the shape/body of a selected elements after itself
+
+			- For the "::before" and "::after" pseudo-elements to function properly, they must have a defined "content" property.
+			-  When the "::before" and "::after" pseudo-elements are used to make shapes, the "content" property is still required, but it's set to an empty string.
+
+
+				.myDiv::before {			//applied before .myDiv class elements
+				  content: "";				//though empty, "content" property is mandatory
+				  background-color: yellow;
+				  border-radius: 25%;		//for some rounded corners
+				  position: absolute;
+				  height: 50px;
+				  width: 70px;
+				  top: -50px;				//shifts 50px towards upward direction
+				  left: 5px;	
+				}
+
+
+	11. animation properties and "@keyframes" rule:
+				
+			Illustration 1:
+				#anim {
+					  animation-name: myColorVariation;
+					  animation-duration: 3s;
+					}
+
+				@keyframes myColorVariation {
+					  0% {
+					    background-color: blue;
+					  }
+					  100% {
+					    background-color: yellow;
+					  }
+					}
+
+			Illustration 2:
+				img:hover {
+				    animation-name: myWidth;
+				    animation-duration: 500ms;
+				  }
+
+				 @keyframes myWidth {
+				    100% {
+				      width: 40px;
+				    }
+				  }
+
+
+		animation-fill-mode: forwards;		//specifies the style applied when the animation has finished.
+		animation-iteration-count: infinite;
+						// infinite loop of animation i.e. animation keeps repeating endlessly
+						//allows you to control how many times you would like to loop through the
+
+		animation-timing-function: 
+			- default value is "ease"
+			- other options are "ease out", "ease in" & "linear"
+
+			animation-timing-function: ease-out;
+			animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+						- The curve lives on a 1 by 1 coordinate system. 
+						- The X-axis of this coordinate system is the duration of the animation (think of it as a time scale), and the Y-axis is the change in the animation.
+						- The cubic-bezier function consists of four main points that sit on this 1 by 1 grid: p0, p1, p2, and p3. p0 and p3 are set for you - they are the beginning and end points which are always located respectively at the origin (0, 0) and (1, 1). 
+						- You set the x and y values for the other two points, and where you place them in the grid dictates the shape of the curve for the animation to follow.
+
+

@@ -1,0 +1,143 @@
+CSS free_code_camp BASIC CSS:
+
+
+	NOTE:
+		Double colon 	- 	pseudo-elements		(::first-line)
+		single colon 	- 	pseudo-classes		(:first-line)
+		1) The double colon replaced the single-colon notation for pseudo-elements in CSS3.
+		2) This was an attempt from W3C to distinguish between pseudo-classes and pseudo-elements.
+		3) The single-colon syntax was used for both pseudo-classes and pseudo-elements in CSS2 and CSS1.
+		4) For backward compatibility, the single-colon syntax is acceptable for CSS2 and CSS1 pseudo-elements.
+
+	BASIC CSS:
+
+	1. CSS has been adopted by all major browsers and allows you to control:
+		color
+		fonts
+		positioning
+		spacing
+		sizing
+		decorations
+		transitions
+
+	2. Three main ways to apply CSS styling:
+		inline
+		internal
+		external
+
+	3. Basic properties:
+
+		width: 500px;		//works for selectors that consists img, div, h1..h6, etc
+
+		border-color: red;   	//the following properties work on the CSS borders of the selector
+		border-width: 5px;
+		border-style: solid;	// "dotted" can be used too
+		border-radius: 10px; 	//this makes the sharp corners of the borders a rounded look
+		border-radius: 50%;		//percentage can also be used to round-out the sharp border corners
+
+		padding: 20px;			// learn about content, padding, border, margin from "W3 schools"
+			padding-top: 40px;
+		    padding-right: 20px;	//the same individual sides can be applied for "margin" property too
+		    padding-bottom: 20px;
+		    padding-left: 40px;
+		padding: 10px 20px 10px 20px;	//NOTE: "padding" property CANNOT have -ve values 
+		padding: 2em;					// "em" is the relative measuring unit
+
+		margin: 20px;
+		margin: -30px; 					// -ve value as margin increases the padding area
+		margin: 10px 20px 10px 20px;
+		
+		background-color: green; 	//
+		background: lightblue url("img_tree.gif") no-repeat fixed center
+								/* color   image-link   position_or_size   repeat   origin   clip attachment   initial|inherit */
+
+		[type='radio'] {
+	  		margin: 20px 0px 20px 0px;		// In this style [html_attribute='value'] is selector
+		}
+					/* these css properties gets applied to html elements that have that specific attribute with that corresponding value */
+
+		p[type]{
+		 	margin: 20px 0px 20px 0px;		//In this style  html_element[attribute] is the selector
+		}
+
+		precedence (specificity) order of CSS:
+			!important > ID > Class > specific element > 'body' element > order of CSS selectors
+
+
+	4. color-scheming in CSS:
+		
+		color: #FF0000;			//Hex code (red)
+		color: #F00;			//shortened Hex code, which is same as the previous one.
+
+		color: rgb(255, 255, 255);		//RGB code (white)
+
+
+	5. CSS Variables:
+		*** "Internet Explorer" browser doesn't support CSS Variables.
+		i) 	a variable is used to apply serveral properties at once.
+		ii) To create a CSS variable, you just need to give it a name with two hyphens in front of it & assign it a value like the following
+				
+				--penguin-skin: gray;				
+						/* This will create a variable named --penguin-skin and assign it the value of gray. Now you can use that variable elsewhere in your CSS to change the value of other elements to gray */
+		
+		iii) After you create your variable, you can assign its value to other CSS properties by referencing the name you gave it.
+
+				background: var(--penguin-skin);
+						/*This will change the background of whatever element you are targeting to gray because that is the value of the --penguin-skin variable. Note that styles will not be applied unless the variable names are an exact match. */
+
+				background: var(--penguin-skin, black);
+						//"black" is the fall-back value, in case the variable is not set for some reason.
+
+
+		iv) When you create a variable, it can be used for the selector in which you create it. It can also be used for selector's descendants. This happens because CSS variables are inherited, just like ordinary properties.
+
+		To make use of inheritance, CSS variables are often defined in the ":root" element.
+
+		":root" is a "pseudo-class selector" that matches the root-element of the document, usually the "html" element. By creating your variables in ":root", they will be available globally and can be accessed from any other selector in the style sheet.
+
+		v) When you create your variables in ":root" they will set the value of that variable for the whole page.
+		You can then over-write these variables by setting them again within a specific element.
+
+				:root {							//applies to  html element
+				    --penguin-belly: pink;
+				}
+				.penguin {
+				    --penguin-belly: white;
+				}
+
+	6. media-query:
+		i)Media query is a CSS technique introduced in CSS3.
+		ii) It uses the @media rule to include a block of CSS properties only if a certain condition is true.
+		iii) If the browser window is 600px or smaller, the background color will be lightblue:
+				
+				@media only screen and (max-width: 600px) {
+				  body {
+				    background-color: lightblue;
+				  }
+				}
+
+		iv) The below syntax changes the css variable "--penguin-skin" to black if the screen-width  gets lower than 350px
+
+			 :root {
+			    --penguin-skin: gray;
+			  }
+			  @media (max-width: 350px) {
+			    :root {
+			        --penguin-skin: black;
+			    }
+			  }
+
+		v) Observe the below example for media_query with breakpoint.
+
+				.col-1 {width: 8.33%;}					/* For desktop: */
+				.col-2 {width: 16.66%;}
+				.col-3 {width: 25%;}
+				.col-4 {width: 33.33%;}
+
+				@media only screen and (max-width: 768px) {    /* For mobile phones: */
+				  [class*="col-"] {
+				    width: 100%;
+				  }
+				}
+
+		

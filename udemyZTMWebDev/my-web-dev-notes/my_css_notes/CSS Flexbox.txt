@@ -1,0 +1,75 @@
+CSS Flexbox
+
+NOTE: 
+  - "float", "clear" and "vertical-align" have no effect on a flex item.
+  - CSS columns have no effect on a flex container.
+
+IMP:
+  - flexbox is a module with several properties.
+  - Some of those properties are used on "flex container", whereas the other to "flex items".
+  - In general "normal flow" involves "block" & "inline" flow directions.
+  - "flex layout" is based on "flex-flow directions":
+          1. Main axis (horizontal by default)
+          2. cros axis (vertical by default)
+  - Beware, "Main axis" direction is not always horizontal, it depends on "flex-direction" property.
+  - "flex-direction"
+
+  1. display:
+        - This defines a flex container; inline or block depending on the given value. It enables a flex context for all its direct children.
+
+      .container {
+        display: flex;        /* or inline-flex */
+      }
+
+
+
+	2. justify-content:flex-start   //items align to the left side of container.
+	                   flex-end     //items align to the right side of container.
+
+	                   center        //items align to the center of the container.
+	                   space-around  //items display with equal spacing around them.
+	                   space-between //items dispaly with equal spacing between them.
+
+	3. align-items    :flex-start   //items align to the top of the corner.
+	                   flex-end     //items align to the bottom of the container.
+	                   center       //items align at the vertical center of the container
+	                   baseline     //items dispaly at he baseline of the container.
+	                   stretch      //items are stretched to fit the container.
+
+	4. flex-direction:  
+          - This establishes the "main-axis" direction, thus defining the direction "flex items" are placed in the "flex container".
+          - This defines the direction items are placed and accepts the following values:
+
+                    row             // Items are placed the same as the text direction.
+                    row-reverse     // Items are placed opposite to the text direction.
+                    column          // Items are placed top to bottom.
+                    column-reverse  // Items are placed bottom to top.
+
+    5.order:
+          - Sometimes reversing the row or column order of a container is not enough. 
+          - In these cases, we can apply the order property to individual items. 
+          - By default, items have a value of 0, but we can use this property to also set it to a +ve or -ve integer value (-2, -1, 0, 1, 2). 
+
+    5.align-self:
+          - can be applied to individual flex-items, overriding the default alignment specified by "align-items"
+          - This property accepts the same values as "align-items" and its value for the specific item
+
+          .item {   //example
+            align-self: auto | flex-start | flex-end | center | baseline | stretch;
+          }
+
+    6.flex-wrap:
+          - By default, flex items will all try to fit onto one line. 
+          - You can change that & allow the items to wrap with "flex-wrap" property.
+          - The following values can be used according to requirement.
+                  nowrap        // Every item is fit to a single line.
+                  wrap          // Items wrap around to additional lines.
+                  wrap-reverse  // Items wrap around to additional lines in reverse.
+              
+    7.flex-flow:
+            - The two properties "flex-direction" and "flex-wrap" are used so often together that the shorthand property "flex-flow" was created to combine them. 
+            - This shorthand property accepts the value of one of the two properties separated by a space
+
+                .container {
+                  flex-flow: column wrap;
+                }

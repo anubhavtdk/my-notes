@@ -1,0 +1,19 @@
+React intro:
+
+aspects of a web application that React helps us with:
+ - offers various kinds of dependencies & app hosting functionalities
+
+
+NodeJS & NPM:
+	- NPM offers seperate modules (containing relevant packages) for each environment
+	- offers a CLI/terminal with which we can manipulates/perform/check on various packages.
+
+
+Primitive way of setting up a Dev env:
+	- manually creating starter files
+	- downloading relevant packages using npm
+	- no extra code required
+
+Advanced way of set-up:
+	- using "create react-app"
+	

@@ -1,0 +1,28 @@
+jsx
+
+JSX embeds HTML into JS
+
+js expressions or objects can be used within HTML code
+
+<p> Hi {username}</p>
+<p style={{prop:value}}> Hi {username}</p>
+
+using jsx, we can directly write/embed html elements  without calling output methods of traditional js
+	eg1:
+		 var myElement = <h1>Yo, whats up?</h1>;
+		 ReactDom.render(
+			 	myElement,
+			 	document.getElementById('root')
+			 );
+
+
+	eg2:
+		var myStuff = {
+			name: "Anu",
+			place: "Hyd"
+		}
+		var myElement = <div><h1>My name is {myStuff.name} and I am from {myStuff.place}</h1></div>;
+		ReactDom.render{
+				myElement,
+				document.getElementById('root')
+		}

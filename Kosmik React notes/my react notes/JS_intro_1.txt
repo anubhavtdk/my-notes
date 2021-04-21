@@ -1,0 +1,13 @@
+
+Data Storage:
+	primitive data types / literals: (var, let, const)
+		int, char, string, boolean, undefined, NaN etc
+
+		fun-fact:
+			if any variable of undefined data-type is concatenated with a string of value "yo", it becomes a string of value "undefined yo".
+
+	basic Data Structures:
+		arrays
+
+	complex Data Structures:
+		graphs, trees, etx

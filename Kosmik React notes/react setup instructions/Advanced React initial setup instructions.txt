@@ -1,0 +1,31 @@
+Advanced React initial setup instructions
+
+"npm install create-react-app"
+	--> create-react-app gets added to our system by npm for us to use
+
+
+npx create-react-app myreactproj
+	--> creates a project within a folder titled "myreactproj"
+
+install GitHub packages as dev-dependency
+	npm install gh-pages --save-dev
+
+Add Properties to Package.json
+	"hostname": "repo link to your project"
+	"predeploy": "npm run build"
+	"deploy": "gh-pages -d build"
+
+
+
+
+
+npm start
+	execute the above command inside your root folder of your react proj to run your app in you local host.
+
+how to use bootstrap in our React Proj:
+	step1:
+	 - run this in the terminal (powershell or cmd or git-bash) in the root directory of the React Proj
+		npm install react-bootstrap bootstrap
+	step2:
+	 - include this line in the code file wherever bootstrap is required/used
+		import 'bootstrap/dist/css/bootstrap.min.css';

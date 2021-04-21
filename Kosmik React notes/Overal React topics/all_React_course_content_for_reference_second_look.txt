@@ -1,0 +1,73 @@
+Naresh IT class 1
+18th March 2021
+
+90 hours course:
+
+HTML			1 hour
+	1. inline & block elements
+	2. input controls (text box, radio buttons, check boxes)
+	3. lists & tables
+JS 				10 hours
+	1. how to get the element references
+	2. how to create variables & functions
+	3. call, apply, bind methods/functions
+	4. array methods/functions
+	5. OOPS (class, object, inheritance)
+	6. ajax 
+	7. promises
+	8. how to apply styles dynamically using JS
+
+
+react 			40 hours
+	1. why react
+	2. virtual DOM
+	3. angular vs react
+	4. displaying content to the user (JSX, Components - Class & functional)
+	5. handling events in react
+	6. how to collect data from input given by user
+	7. validating the data present in the user input
+	8. handling ajax (4 ways - (XHTTPRequest, fetch, jquery, axios))
+	9. Node JS
+	10. react (client) + nodejs (server) + mysql (DB)
+	11. deploy code into AWS EC2 instance
+	12. Handling Routing
+	13. build & deploy code (AWS)
+	14. React lifecycle methods
+	15. creating reusable components
+	16. HOC
+	17. applying styles dynamically in react
+	18. pure component vs React.memo
+	19. state less vs state-full
+	20. Controlled vs uncontrolled
+	21. exception handling
+	22. React Fragment
+	23. var vs let vs const vs this.state vs this.props
+	24. context
+	25. integrating 3rd party library
+	26. testcases
+	27. conditional rendering
+
+
+Redux 			15 hours
+	1. integrating redux into react app(reducers, store)
+	2. actions
+	3. redux thunk (middleware)
+	4. redux saga (middleware)
+	5. redux forms
+	6. (react + redux) + (nodejs) + (MongoDB)
+ *Redux is used for state management
+
+
+React hooks 	20 hours
+	1. useState
+	2. useEffect
+	3. useMemo
+	4. useCallback
+	5. useContext
+	6. useReducer
+	7. (React hooks using webpack) + nodejs (JWT) + OracleDB
+*JWT is JSON Web Token
+
+test 			2 hours
+react native 	2 hours
+
